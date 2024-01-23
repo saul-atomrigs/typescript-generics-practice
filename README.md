@@ -15,3 +15,10 @@ const strings = ["hello", "world"]
 // const getFirstElement: <string>(array: string[]) => string
 const firstString = getFirstElement(strings)
 ```
+
+### 2. 기본 Generics 사용예시 2
+``` typescript
+const input = document.querySelector<HTMLInputElement>("#input")!
+
+input?.value
+```

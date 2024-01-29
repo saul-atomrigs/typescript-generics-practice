@@ -50,3 +50,18 @@ const betterResponse: BetterResponseType<{ name: string; age: number }> = {
  isError: false,
 }
 ```
+
+### 4. 기본값
+``` typescript
+type ApiResponseWithDefaultValue<Data extends object = { status: number }> = {
+ data: Data
+ isError: boolean
+}
+
+const response: ApiResponseWithDefaultValue = {
+ data: {
+  status: 200,
+ },
+ isError: false,
+}
+```

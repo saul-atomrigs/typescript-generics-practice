@@ -22,3 +22,31 @@ const input = document.querySelector<HTMLInputElement>("#input")!
 
 input?.value
 ```
+
+### 3. API 응답 예시
+``` typescript
+// So so
+type ApiResponse = {
+ data: any
+ isError: boolean
+}
+
+const response: ApiResponse = {
+ data: {},
+ isError: false,
+}
+
+// Better (with generic)
+type BetterResponseType<Data> = {
+ data: Data
+ isError: boolean
+}
+
+const betterResponse: BetterResponseType<{ name: string; age: number }> = {
+ data: {
+  name: "John",
+  age: 30,
+ },
+ isError: false,
+}
+```
